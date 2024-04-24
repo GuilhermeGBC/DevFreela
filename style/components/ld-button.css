@@ -1,0 +1,25 @@
+.ld-button {
+    background: blue;
+    color: white;
+    font-family: var(--font-family-base);
+    font-size: calc(var(--ld-font-family-base) + 8px);
+    font-weight: 800;
+    padding: 20px;
+    border-radius: 50px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.ld-button.-small {
+    font-size: calc(var(--ld-font-family-base) + 4px);
+    font-weight: 600;
+    padding: 12px 30px;
+    margin-bottom: 5px;
+
+}
+
+.ld-button:hover{
+    background-color: var(--ld-color-primary-light);
+}
