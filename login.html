@@ -34,6 +34,9 @@
     <!-- PAGES -->
     <link rel="stylesheet" href="style/pages/login.css">
     <!-- TRUMPS -->
+
+    <!-- SCRIPTS -->
+    <script src="scripts/login.js"></script>
 </head>
 
 <body>
@@ -48,35 +51,35 @@
             </header>
 
             <main class="main-content">
-                <div class="left">
-                    <span class="steps">PASSO 1 DE 2</span>
-                    <h1 class="main-title">
-                        <span class="up">Olá!</span>
-                        <span class="down">Vamos criar seu cadastro!</span>
-                    </h1>
-                    <div class="radio-buttons">
-                        <h3 class="title">Qual o seu perfil?</h3>
-                        <div class="buttons">
-                            <label class="ld-radio">
-                                Dev
-                                <input name="cargo" type="radio">
-                                <span class="checkmark"></span>
-                            </label>
-        
-                            <label class="ld-radio">
-                                Cliente
-                                <input name="cargo" type="radio">
-                                <span class="checkmark"></span>
-                            </label>
+                <form class="left" onsubmit="cadastrar()" action="javascript:void(0)">                 
+                        <span class="steps">PASSO 1 DE 2</span>
+                        <h1 class="main-title">
+                            <span class="up">Olá!</span>
+                            <span class="down">Vamos criar seu cadastro!</span>
+                        </h1>
+                        <div class="radio-buttons">
+                            <h3 class="title">Qual o seu perfil?</h3>
+                            <div class="buttons">
+                                <label class="ld-radio">
+                                    Dev
+                                    <input name="role" type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+            
+                                <label class="ld-radio">
+                                    Cliente
+                                    <input name="role" type="radio">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <input type="text" class="ld-input" placeholder="Nome Completo">
-                    <input type="date" class="ld-input" placeholder="Data de Nascimento">
-                    <input type="email" class="ld-input" placeholder="Email">
-                    <input type="password" class="ld-input" placeholder="Senha">
-
-                    <button class="ld-button">Continuar</button>
-                </div>
+                        <input required id="fullName" type="text" class="ld-input" placeholder="Nome Completo">
+                        <input required id="birthDate" type="date" class="ld-input" placeholder="Data de Nascimento">
+                        <input required id="email" type="email" class="ld-input" placeholder="Email">
+                        <input required id="password" type="password" class="ld-input" placeholder="Senha">
+    
+                        <button type="submit" class="ld-button">Continuar</button>
+                </form>
                 <div class="right">
                     <img class="image" src="assets/image/bg-cubes.png" alt="Fundo Decorativo DevFreela">
                 </div>
