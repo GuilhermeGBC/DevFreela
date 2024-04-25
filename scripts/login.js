@@ -34,10 +34,10 @@ function cadastrar(){
     })
     .then(response => response.json())
     .then(response => {
-        alert("Cadastrado com sucesso!")
-        console.log(response)
+        alert("Cadastrado com sucesso!");
+        console.log(response);
     })
     .catch(error => {
-        alert("Ocorreu um erro inesperado!")
+        alert("Ocorreu um erro inesperado!");
     });
 }
