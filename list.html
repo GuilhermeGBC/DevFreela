@@ -35,6 +35,8 @@
     <!-- PAGES -->
     <link rel="stylesheet" href="style/pages/list.css">
     <!-- TRUMPS -->
+
+    <script src="scripts/list.js"></script>
 </head>
 
 <body>
@@ -50,8 +52,8 @@
                     </div>       
                     <div class="user">
                         <div class="info">
-                            <span class="name">Guilherme Bastos</span>
-                            <span class="role">Desenvolvedor</span>
+                            <span id="name" class="name"></span>
+                            <span id="role" class="role"></span>
                         </div>
                         <div class="photo-wrapper">
                             <img src="https://cdn-icons-png.flaticon.com/512/1373/1373255.png" alt="Foto do usuário">
@@ -64,11 +66,11 @@
                <div class="title-button">
                      <h1 class="title">Projetos</h1>
                     <div class="button-wrapper">
-                        <button class="ld-button -small">Novo Projeto</button>
+                        <a href="project-create-edit.html" class="ld-button -small">Novo Projeto</a>
                     </div>
                </div>
                
-               <div class="tabble-wrapper">
+               <div class="table-wrapper">
                     <div class="ld-table">
                         <div class="head">
                             <div class="row">
@@ -77,29 +79,7 @@
                                 <div> Ações</div>
                             </div>
                         </div>
-                        <div class="body">
-                            <div class="row">
-                                <div class="title-description">
-                                    <h6 class="title">Plataforma de educação</h6>
-                                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptatem?</p>
-                                </div>
-                                <div class="price">R$ 1.000.000,00</div>
-                                <div class="actions">
-                                    <span class="edit material-icons">edit</span>
-                                    <span class="delete material-icons">delete</span>    
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="title-description">
-                                    <h6 class="title">Plataforma de educação</h6>
-                                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptatem?</p>
-                                </div>
-                                <div class="price">R$ 1.000.000,00</div>
-                                <div class="actions">
-                                    <span class="edit material-icons">edit</span>
-                                    <span class="delete material-icons">delete</span>    
-                                </div>
-                            </div>
+                        <div class="body" id="table-body">
                         </div>
                     </div>
                </div>
