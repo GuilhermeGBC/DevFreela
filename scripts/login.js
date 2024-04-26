@@ -13,7 +13,11 @@ function roleIsChecked() {
 function cadastrar(){
     // Se ele entrou aqui, é porque o form está válido!
     if(roleIsChecked() == false) {
-        alert("É obrigatório selecionar o tipo perfil!");
+        Swal.fire({
+            title: "Ops!",
+            text: "É necessário marcar uma role!",
+            icon: "error"
+          });
         return;
     }
 
@@ -34,8 +38,20 @@ function cadastrar(){
     })
     .then(response => response.json())
     .then(response => {
-        alert("Cadastrado com sucesso!");
-        console.log(response);
+        Swal.fire({
+            title: "Muito bem!",
+            text: "Seu cadastro foi realizado com sucesso!",
+            icon: "success",
+            showCancelButton: false,
+
+          }).then((result) => {
+            if (result.isConfirmed) {
+                localStorage.setItem('userName', response.fullName);
+                localStorage.setItem('role', response.role === "dev" ? "Desenvolvedor" : "Cliente");
+                localStorage.setItem('idClient', response.id);
+                window.location.href = 'list.html';
+            }
+          });
     })
     .catch(error => {
         alert("Ocorreu um erro inesperado!");
